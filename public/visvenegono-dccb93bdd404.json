@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "visvenegono",
+  "private_key_id": "dccb93bdd4046938e64f9cf96b93aa9b848b90e6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHh0/w0pi6mGXE\nBgQeJraERFWZCH+bzWk5iKrreYGc2D+BhuOESIfQG9l/IMJ7iEqOtK5TowAqIBI1\nxlgUBx+hlWMzdQkHi7e5pM9cx3DoqPFwodyWwLWMz0l/EyICifW9rx45jYv5ayII\nS+RvM5ySVM0iTA9V7fL4QLp7/1DrvkDdBDgKP2RZH3NOJWkwN50re3y6Xh9P02JZ\n5I3DsbvMCpLDp8aglb4RViD3G8j7hUnRZGkpwzpVurMeJAhEtP/RGj3cHoaGZdxV\nHC8Kq5wEeXJWOcK2VQci+RuGSpR8Uluy8sMYzroPVh5b9XB+sjlfTn0fyZRWW/AH\nRXLcodqVAgMBAAECggEAFxrbp0nz5S3JfaFr7sr5RzPSJviCrshWVctlnibVEKzy\nKK4bGAh4dONmkSx/02kREuKdLJ+HjebxS88gYWu0egragmGDtFBetkyxWFcc+eEh\nZisGDQJWAScul7YmkGm+JgQWgkfOEuuvfdwYWdfh67V+0kfGvobGKwn38N8+R64k\nY/AM3QhRNlBsRVnygo61DUjN3H1LArumiePuAQRvNNEA4MRk/CHAh+SfaUyHvZx6\njO4I2pHKjrEPpeA2YqFr+HgoCG+hLaADHv8CayW56UkXYEB2YAlTo7zOA/hT9A5A\ng/2LTQajV/5eZS8D2AHC8UD9w36Epvsp1aUrGuWGmQKBgQC73zpBpFIk7SW8IogU\nLwvSJgRQisg2KbNt5dJNXXaIrbPzCpWsgv73LKn5CgLEB91/mfYZqBGKwYSdlRhf\nGKmdCTdiczHrdJMaqhKG6dnwknL1K67UQmQZNT8GRqqhQDdwPjpello+mZ3e3Fff\n43mka/l1wvbjGOjOd1/AjiJ3fQKBgQC4rN+XUbgbbagNUQmsUGSkpe77E6sd2ox2\n0LtUBQwxyh96xoI0CnlkpSp3vrkvbdVZNlW5adDGlvDfqbArXd97gZ16Dn0zXaM9\nsgXt/Gsn9aMOA3xTynkHJ3xfbyZUjGp10MtbmcDKeNBWd6wo5XfD6nXs8EomrKIO\nIXCbHI/K+QKBgFadsVcoMjMSHs6hQQnFMvb9TgnwIiROj4oAZjgC+i5Dn25TF/SE\nJJbCwc6und3RHn7A9eSYRxYo6EJaxfS6AyECacV7BK3gfh3SAV6wHCm860E7lYwI\n2+t/UAJNvEdBuw2FsxV+zjaETnO8NMtlLeTvXwC7FWZYSqU+BihZn2xlAoGBAJVp\nkFDeFeVjF8cGXJwkQvkPI0XSCOzTaDes8xKsLsyNqmBsAOXX35U1KCHPlgYwh59x\nHXQwj3BMqL9ci6LahThoip8438TSKoN8590/Dvc6flyVJ16nfrnyEWcpB0r6fBur\n/Qu0Xs2xZ2W91vUTio1gwV4cnvGhVE+4cGGefxwJAoGAV170gxoaQDIB6HYZNIbq\nsQL8CR9BxilEV3uBN3E1DZntHwWoOedshdTLbfS7szIRFnf/r4RCDvTIyjN2G/im\niem9VvrwGF/I3fg963ukghFyIAV2+1b6yQXLxCmjl7zZXT09qPpLLsGFz0dPL0JU\nQkYOzy2ymvzJHNfrOXh+UX0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "visvenegono@visvenegono.iam.gserviceaccount.com",
+  "client_id": "108470094552840121083",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/visvenegono%40visvenegono.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

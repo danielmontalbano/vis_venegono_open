@@ -1,7 +1,37 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { useEffect, useState } from "react";
+import * as XLSX from "xlsx";
+import axios from 'axios';
+import Giocatore from '../components/Giocatore';
 
 export default function Home() {
+  const [convocazioni, setConvocazioni] = useState([]);
+
+  useEffect(() => {
+    // Effettua una richiesta API per ottenere le convocazioni
+    const fetchConvocazioni = async () => {
+      const response = await fetch("/api/convocazioni");
+      if (response.ok) {
+        const data = await response.json();
+        setConvocazioni(data);
+      }
+    };
+
+    fetchConvocazioni();
+  }, []);
+
+  const handleConvocazioneChange = (numero, newConvocato) => {
+    // Aggiorna lo stato locale delle convocazioni
+    setConvocazioni((prevConvocazioni) =>
+      prevConvocazioni.map((giocatore) =>
+        giocatore.numero === numero
+          ? { ...giocatore, convocato: newConvocato === "true" }
+          : giocatore
+      )
+    );
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,46 +40,23 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div>
+          <h1 className="text-3xl font-bold mb-4">
+            Convocazioni della squadra di calcio
+          </h1>
+          {convocazioni.map((giocatore) => (
+            <Giocatore
+              key={giocatore.numero}
+              numero={giocatore.numero}
+              nome={giocatore.nome}
+              convocato={giocatore.convocato}
+              onConvocazioneChange={handleConvocazioneChange}
+            />
+          ))}
         </div>
       </main>
 
-      <footer>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -58,7 +65,7 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
 
       <style jsx>{`
         main {
@@ -92,15 +99,8 @@ export default function Home() {
           border-radius: 5px;
           padding: 0.75rem;
           font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
       `}</style>
 
@@ -109,17 +109,8 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
         }
         * {
